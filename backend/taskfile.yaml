@@ -9,3 +9,6 @@ tasks:
     cmds:
       - docker-compose up -d
       - ./gradlew bootRun
+  down:
+    cmds:
+      - docker-compose down
