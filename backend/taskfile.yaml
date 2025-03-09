@@ -1,0 +1,11 @@
+version: '3'
+
+tasks:
+  build:
+    cmds:
+      - docker-compose build
+      - ./gradlew
+  up:
+    cmds:
+      - docker-compose up -d
+      - ./gradlew bootRun

@@ -1,4 +1,4 @@
-package com.moneyrecorder.back_end
+package com.moneyrecorder.backend
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class BackEndApplication
 
 fun main(args: Array<String>) {
-	runApplication<BackEndApplication>(*args)
+    runApplication<BackEndApplication>(*args)
 }
