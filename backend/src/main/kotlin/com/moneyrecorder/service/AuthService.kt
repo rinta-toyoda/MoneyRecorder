@@ -1,9 +1,9 @@
-package com.moneyrecorder.backend.service
+package com.moneyrecorder.service
 
-import com.moneyrecorder.backend.dto.UserDTO
-import com.moneyrecorder.backend.entity.User
-import com.moneyrecorder.backend.exception.UserAlreadyExistsException
-import com.moneyrecorder.backend.repository.UserRepository
+import com.moneyrecorder.dto.UserDTO
+import com.moneyrecorder.entity.User
+import com.moneyrecorder.exception.UserAlreadyExistsException
+import com.moneyrecorder.repository.UserRepository
 import mu.KLogging
 import org.springframework.security.authentication.AuthenticationManager
 import org.springframework.security.core.userdetails.UserDetailsService
@@ -29,11 +29,11 @@ class AuthService(
         val hashedPassword = passwordEncoder.encode(userDTO.password)
 
         // Create User
-        val jwtUser = User(null, userDTO.email, hashedPassword)
+        val user = User(null, userDTO.email, hashedPassword)
         // Save User
-        jwtUser.let { userRepository.save(it) }
+        userRepository.save(user)
 
-        return jwtUser.let {
+        return user.let {
             UserDTO(it.id, it.email, it.password)
         }
     }

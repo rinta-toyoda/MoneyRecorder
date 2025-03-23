@@ -1,6 +1,6 @@
-package com.moneyrecorder.backend.service
+package com.moneyrecorder.service
 
-import com.moneyrecorder.backend.repository.UserRepository
+import com.moneyrecorder.repository.UserRepository
 import org.springframework.security.core.authority.SimpleGrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService

@@ -1,4 +1,4 @@
-package com.moneyrecorder.backend.dto
+package com.moneyrecorder.dto
 
 import jakarta.validation.constraints.NotBlank
 

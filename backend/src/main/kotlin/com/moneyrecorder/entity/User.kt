@@ -1,4 +1,4 @@
-package com.moneyrecorder.backend.entity
+package com.moneyrecorder.entity
 
 import jakarta.persistence.*
 

@@ -1,6 +1,6 @@
-package com.moneyrecorder.backend.config
+package com.moneyrecorder.config
 
-import com.moneyrecorder.backend.service.CustomUserDetailsService
+import com.moneyrecorder.service.CustomUserDetailsService
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.security.authentication.AuthenticationManager
@@ -31,7 +31,7 @@ class SecurityConfig(
         http
             .authorizeHttpRequests {
                 // Allow anyone to register
-                it.requestMatchers("/auth/signup").permitAll()
+                it.requestMatchers("/v1/auth/signup").permitAll()
 
                 // Public endpoints
                 it.requestMatchers("/public/**").permitAll()
@@ -43,7 +43,10 @@ class SecurityConfig(
                 it.permitAll()
             }
             // Optionally enable CSRF, etc.
-            .csrf { it.disable() }
+            .csrf {
+                it.ignoringRequestMatchers("/v1/auth/signup")
+                it.disable()
+            }
 
         return http.build()
     }

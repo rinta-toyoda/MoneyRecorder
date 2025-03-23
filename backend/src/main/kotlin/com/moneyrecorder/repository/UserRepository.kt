@@ -1,6 +1,6 @@
-package com.moneyrecorder.backend.repository
+package com.moneyrecorder.repository
 
-import com.moneyrecorder.backend.entity.User
+import com.moneyrecorder.entity.User
 import org.springframework.data.repository.CrudRepository
 
 interface UserRepository : CrudRepository<User, Int> {

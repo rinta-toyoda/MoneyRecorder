@@ -1,4 +1,4 @@
-package com.moneyrecorder.backend.config
+package com.moneyrecorder.config
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

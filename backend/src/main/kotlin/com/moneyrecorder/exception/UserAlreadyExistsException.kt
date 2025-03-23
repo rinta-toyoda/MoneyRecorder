@@ -1,4 +1,4 @@
-package com.moneyrecorder.backend.exception
+package com.moneyrecorder.exception
 
 class UserAlreadyExistsException(
     message: String,

@@ -1,4 +1,4 @@
-package com.moneyrecorder.backend
+package com.moneyrecorder
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
