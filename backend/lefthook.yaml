@@ -2,4 +2,4 @@ pre-commit:
   parallel: true
   jobs:
     - name: lint kotlin
-      run: ktlint
+      run: ktlint --format
