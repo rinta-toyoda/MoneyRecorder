@@ -20,7 +20,5 @@ spring:
   h2:
     console:
       enabled: true
-message: Hello from default profile
-
 server:
   port: 8090
